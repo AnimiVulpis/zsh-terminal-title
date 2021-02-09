@@ -1,6 +1,8 @@
+emulate -L zsh
+setopt warn_create_global no_auto_pushd
+
 # Display $1 in terminal title.
 function set-term-title() {
-    emulate -L zsh
     if [[ -t 1 ]]; then
         print -rn -- $'\e]0;'${(V)1}$'\a'
     elif [[ -w $TTY ]]; then
