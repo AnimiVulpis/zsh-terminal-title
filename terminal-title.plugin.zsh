@@ -13,9 +13,9 @@ function set-term-title() {
 # When a command is running, display it in the terminal title.
 function set-term-title-preexec() {
     if (( P9K_SSH )); then
-        set-term-title ${(V%):-"%n@%m: "}$1
+        set-term-title ${(V%):-"%n@%m: %~ - "}$1
     else
-        set-term-title $1
+        set-term-title ${(V%):-"%~ - "}$1
     fi
 }
 
