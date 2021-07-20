@@ -4,9 +4,9 @@ setopt warn_create_global no_auto_pushd
 # Display $1 in terminal title.
 function set-term-title() {
     if [[ -t 1 ]]; then
-        print -rn -- $'\e]0;'${(V)1}$'\a'
+        print -rn -- $'\e]0;'$TERM: ${(V)1}$'\a'
     elif [[ -w $TTY ]]; then
-        print -rn -- $'\e]0;'${(V)1}$'\a' >$TTY
+        print -rn -- $'\e]0;'$TERM: ${(V)1}$'\a' >$TTY
     fi
 }
 
