@@ -1,6 +1,11 @@
-# zsh-terminal-title
+# zsh-terminal-title (Archived)
 
 Terminal title setting plugin for zsh with no options
+
+## Archived
+
+As I'm now using https://github.com/romkatv/zsh4humans which does terminal title setting on it's own
+I have no need anymore for this repository.
 
 ## Attribution
 
